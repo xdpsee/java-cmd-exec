@@ -1,5 +1,3 @@
-package com.ttpod.fingerprint.cmd;
-
 import java.io.ByteArrayOutputStream;
 import java.io.File;
 import java.io.IOException;
@@ -9,10 +7,6 @@ import java.util.List;
 import java.util.Timer;
 import java.util.TimerTask;
 
-/**
- * @author zhenhui.czh
- * @since 2015.09.17 PM
- */
 @SuppressWarnings("unused")
 public abstract class Command {
 
@@ -26,7 +20,7 @@ public abstract class Command {
     protected abstract File directory();
 
     protected int timeout() {
-        return 1000 * 60;// 默认1分钟超时
+        return 1000 * 60;// default timeout
     }
 
     public Result execute() throws Exception {
